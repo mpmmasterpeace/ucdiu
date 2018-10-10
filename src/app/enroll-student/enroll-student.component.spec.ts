@@ -1,17 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { MatDialogModule, MatDialogRef, MatFormFieldModule, MatInputModule, MAT_DIALOG_DATA } from '@angular/material';
-import { CreateCourseComponent } from './create-course.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { EnrollStudentComponent } from './enroll-student.component';
 
 
-describe('CreateCourseComponent', () => {
-  let component: CreateCourseComponent;
-  let fixture: ComponentFixture<CreateCourseComponent>;
+describe('EnrollStudentComponent', () => {
+  let component: EnrollStudentComponent;
+  let fixture: ComponentFixture<EnrollStudentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CreateCourseComponent],
+      declarations: [EnrollStudentComponent],
       imports: [FormsModule, MatFormFieldModule, MatDialogModule, MatInputModule, NoopAnimationsModule],
       providers: [{ provide: MatDialogRef, useValue: {} },
       { provide: MAT_DIALOG_DATA, useValue: {} }, ],
@@ -20,7 +20,7 @@ describe('CreateCourseComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateCourseComponent);
+    fixture = TestBed.createComponent(EnrollStudentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

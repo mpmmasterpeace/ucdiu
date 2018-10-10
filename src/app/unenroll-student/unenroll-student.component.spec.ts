@@ -1,15 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { DeleteStudentComponent } from './delete-student.component';
+import { UnenrollStudentComponent } from './unenroll-student.component';
 
 
-describe('DeleteStudentComponent', () => {
-  let component: DeleteStudentComponent;
-  let fixture: ComponentFixture<DeleteStudentComponent>;
+describe('UnenrollStudentComponent', () => {
+  let component: UnenrollStudentComponent;
+  let fixture: ComponentFixture<UnenrollStudentComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DeleteStudentComponent],
+      declarations: [UnenrollStudentComponent],
       imports: [MatDialogModule, ],
       providers: [{ provide: MatDialogRef, useValue: {} },
       { provide: MAT_DIALOG_DATA, useValue: {} }, ],
@@ -18,7 +18,7 @@ describe('DeleteStudentComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DeleteStudentComponent);
+    fixture = TestBed.createComponent(UnenrollStudentComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

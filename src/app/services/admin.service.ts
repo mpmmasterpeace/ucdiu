@@ -47,6 +47,21 @@ export class AdminService {
     return this.http.get(this.studentUrl + id);
   }
 
+  public getEnrolledStudentsInCourse(courseId: number) {
+    return this.http.get(this.courseUrl + courseId + '/students');
+  }
+
+  public enrollStudentInCourse(courseCode: number, studentId: number) {
+    return this.http.post(this.courseUrl + courseCode + '/enroll/' + studentId, '{}',
+    {responseType: 'text'});
+  }
+
+  public unenrollStudentFromCourse(courseCode: number, studentId: number) {
+    return this.http.post(this.courseUrl + courseCode + '/drop/' + studentId, '{}',
+    {responseType: 'text'});
+  }
+
+
   public addStudent(id: number, name: string) {
     return this.http.post(this.addStudentUrl,
       '{"id":' + id + ', "name":"' + name + '"}',

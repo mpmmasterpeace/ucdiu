@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>Enroll a Student to Class</h1>
+<div mat-dialog-content>
+  <div>
+    <label>
+      <span>Student Id:&nbsp;</span>
+      <mat-form-field>
+        <input matInput required [(ngModel)]="data.id">
+      </mat-form-field>
+    </label>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button [disabled]="!data.id"
+    [mat-dialog-close]="data">Enroll</button>
+</div>

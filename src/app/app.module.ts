@@ -17,6 +17,9 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { StudentCardComponent } from './student-card/student-card.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { DeleteStudentComponent } from './delete-student/delete-student.component';
+import { EnrollStudentComponent } from './enroll-student/enroll-student.component';
+import { UnenrollStudentComponent } from './unenroll-student/unenroll-student.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   { path: 'admin-courses', component: AdminCoursesComponent },
@@ -36,7 +39,10 @@ const appRoutes: Routes = [
     CreateCourseComponent,
     StudentCardComponent,
     CreateStudentComponent,
-    DeleteStudentComponent
+    DeleteStudentComponent,
+    EnrollStudentComponent,
+    UnenrollStudentComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -60,9 +66,11 @@ const appRoutes: Routes = [
     CreateCourseComponent,
     CourseCardComponent,
     DeleteCourseComponent,
+    EnrollStudentComponent,
     CreateStudentComponent,
     StudentCardComponent,
     DeleteStudentComponent,
+    UnenrollStudentComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
