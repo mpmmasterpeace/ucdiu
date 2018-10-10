@@ -1,0 +1,53 @@
+<h1 mat-dialog-title>Create a New Course</h1>
+<div mat-dialog-content>
+  <div>
+    <label>
+      <span>Course code:&nbsp;</span>
+      <mat-form-field>
+        <input matInput required [(ngModel)]="data.code">
+      </mat-form-field>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Course Name:&nbsp;</span>
+      <mat-form-field>
+        <input matInput required [(ngModel)]="data.name">
+      </mat-form-field>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Course Description:&nbsp;</span>
+      <mat-form-field>
+        <input matInput required [(ngModel)]="data.description">
+      </mat-form-field>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Professor:&nbsp;</span>
+      <mat-form-field>
+        <input matInput required [(ngModel)]="data.professor">
+      </mat-form-field>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Class Capacity:&nbsp;</span>
+      <mat-form-field>
+        <input matInput required [(ngModel)]="data.capacity">
+      </mat-form-field>
+    </label>
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button [disabled]="!data.code || 
+                      !data.name ||
+                      !data.description ||
+                      !data.professor ||
+                      !data.capacity"
+    [mat-dialog-close]="data">Create</button>
+</div>

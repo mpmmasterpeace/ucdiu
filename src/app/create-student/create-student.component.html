@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Add a New Student</h1>
+<div mat-dialog-content>
+  <div>
+    <label>
+      <span>Full Name:&nbsp;</span>
+      <mat-form-field>
+        <input matInput required [(ngModel)]="data.name">
+      </mat-form-field>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Student Id:&nbsp;</span>
+      <mat-form-field>
+        <input matInput required [(ngModel)]="data.id">
+      </mat-form-field>
+    </label>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button [disabled]="!data.name || !data.id"
+    [mat-dialog-close]="data">Create</button>
+</div>
